@@ -5,14 +5,23 @@
 }
 
 .home {
-    left: 0;
-    position: absolute;
-    margin-top: 1em;
-    margin-left: 1em;
+    @media only screen and (min-width: 651px) {
+        left: 0;
+        position: absolute;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    @media only screen and (max-width: 650px) {
+        right:0;
+        margin-right: 1em;
+        margin-top: 1em;
+        position: absolute;
+    }
 
     button {
-        height: 5em;
-        width: auto;
+        // height: 1em;
+        // width: 4em;
         margin: 0.2em;
         padding: 1.9em 1.6em;
         border-radius: 0.5em;
@@ -20,6 +29,36 @@
         color: white;
         border-color: black;
         font-size: 0.9em;
+
+    }
+}
+
+.mobile {
+    left: 0;
+    width: 30%;
+    
+    @media only screen and (min-width: 649px) {
+        display: none;
+    }
+}
+
+#hamburger {
+    // display: none;
+    background-color: white;
+    height: 5em;
+    width: 5em;
+    margin-top: 2em;
+    margin-left: 2em;
+
+    @media only screen and (min-width: 649px) {
+        height: 5em;
+        width: auto;
+    }
+
+    span {
+        color: white;
+        height: 5em;
+        width: 5em;
     }
 }
 
@@ -39,5 +78,13 @@
         color: white;
         border-color: black;
         font-size: 0.9em;
+
+
+        @media only screen and (max-width: 650px) {
+            height: 5em;
+            width: auto;
+            font-size: 0.4em;
+            display: none;
+        }
     }
 }
