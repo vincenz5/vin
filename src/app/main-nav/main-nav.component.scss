@@ -1,5 +1,7 @@
 .sidenav-container {
-  height: 10%;
+  height: 8%;
+  position: sticky;
+  top: 0;
 }
 
 .sidenav {
@@ -16,14 +18,26 @@
 
 }
 
+#sidebutton {
+  height: 15%;
+}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
+.mat-toolbar {
+  height: 100%;
+}
+
 .mat-toolbar-row {
   height: 100%;
+
+  @media (max-width: 600px) {
+    height: 100%;
+  }
 }
 
 
