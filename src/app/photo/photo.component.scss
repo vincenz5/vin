@@ -1,6 +1,13 @@
-
+.main {
+    margin: 0 auto;
+    display: block;
+}
 
 .image {
     width: 90%;
     height: auto;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    border-radius: 0.2em;
 }
