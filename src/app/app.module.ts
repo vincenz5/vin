@@ -11,6 +11,12 @@ import { WritingComponent } from './writing/writing.component';
 import { PhotoComponent } from './photo/photo.component';
 import { SoftwareComponent } from './software/software.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -20,13 +26,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfComponent,
     WritingComponent,
     PhotoComponent,
-    SoftwareComponent
+    SoftwareComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule
     ],
   providers: [],
   bootstrap: [AppComponent]
