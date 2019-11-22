@@ -17,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { ProfExplainComponent } from './prof/prof-explain/prof-explain.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatListModule } from '@angular/material/list';
     WritingComponent,
     PhotoComponent,
     SoftwareComponent,
-    MainNavComponent
+    MainNavComponent,
+    ProfExplainComponent
   ],
   imports: [
     BrowserModule,
