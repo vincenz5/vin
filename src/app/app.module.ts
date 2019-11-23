@@ -31,6 +31,8 @@ import { BaruchComponent } from './prof/baruch/baruch.component';
 import { WarmhComponent } from './prof/warmh/warmh.component';
 import { RpiComponent } from './prof/rpi/rpi.component';
 import { LanguageComponent } from './prof/language/language.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { LanguageComponent } from './prof/language/language.component';
     MatIconModule,
     MatDialogModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
   providers: [],
   bootstrap: [AppComponent]
