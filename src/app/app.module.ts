@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,7 +64,8 @@ import { LanguageComponent } from './prof/language/language.component';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,24 @@
+
+
 .main {
     margin: 0 auto;
     display: block;
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 10em;
+    background-color: rgb(59, 57, 57);
+    color: white;
+    // height: 100%;
+    padding-top: 1em;
+}
+
+mat-tab {
+    padding-top: 2em;
 }
 
 .image {
     width: 90%;
     height: auto;
-    margin: 0 auto;
+    margin: 1em auto;
     position: relative;
     display: block;
     border-radius: 0.2em;

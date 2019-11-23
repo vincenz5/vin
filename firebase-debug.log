@@ -1,0 +1,33 @@
+[debug] [2019-11-23T18:06:09.700Z] ----------------------------------------------------------------------
+[debug] [2019-11-23T18:06:09.702Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2019-11-23T18:06:09.702Z] CLI Version:   7.8.1
+[debug] [2019-11-23T18:06:09.702Z] Platform:      darwin
+[debug] [2019-11-23T18:06:09.702Z] Node Version:  v13.0.1
+[debug] [2019-11-23T18:06:09.703Z] Time:          Sat Nov 23 2019 13:06:09 GMT-0500 (Colombia Standard Time)
+[debug] [2019-11-23T18:06:09.703Z] ----------------------------------------------------------------------
+[debug] [2019-11-23T18:06:09.703Z] 
+[debug] [2019-11-23T18:06:09.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-23T18:06:09.713Z] > authorizing via signed-in user
+[debug] [2019-11-23T18:06:09.714Z] [iam] checking project vincenz for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-23T18:06:09.716Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vincenz:testIamPermissions  
+
+[debug] [2019-11-23T18:06:10.109Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-23T18:06:10.111Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vincenz  
+ 
+[debug] [2019-11-23T18:06:10.781Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'vincenz'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-11-23T18:06:13.031Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/vincenz/versions  
+
+[debug] [2019-11-23T18:06:14.222Z] <<< HTTP RESPONSE 200
+[info] i  hosting[vincenz]: beginning deploy...
+[info] i  hosting[vincenz]: found 19 files in dist/vin
+[debug] [2019-11-23T18:06:14.631Z] [hosting] hash cache [ZGlzdC92aW4] stored for 19 files
+[debug] [2019-11-23T18:06:14.632Z] [hosting][hash queue][FINAL]
+[debug] [2019-11-23T18:06:14.632Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/vincenz/versions/66312f82d123e848:populateFiles  
+ <request body omitted>
+[debug] [2019-11-23T18:06:15.788Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-23T18:06:15.794Z] [hosting][populate queue][FINAL]
+[debug] [2019-11-23T18:06:15.794Z] [hosting] uploads queued: 12
