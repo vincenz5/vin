@@ -1,8 +1,7 @@
 .main {
     background-color: rgb(59, 56, 56);
     color: white;
-    padding-bottom: 18em;
-    padding-top: 1em;
+    padding: 1em 0.5em 9em 0.4em;
 }
 
 .title {
@@ -35,6 +34,11 @@
     text-align: center;
     margin-right: 10%;
     margin-left: 10%;
+
+    @media only screen and (max-width: 600px) {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
 }
 
 .over {
@@ -44,7 +48,7 @@
 }
 
 .over:hover {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .texttitle {
