@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { MatTabsModule } from '@angular/material/tabs';
+import { AngularFireModule } from 'angularfire2';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +35,7 @@ import { RpiComponent } from './prof/rpi/rpi.component';
 import { LanguageComponent } from './prof/language/language.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,8 @@ import { environment } from '../environments/environment';
     BaruchComponent,
     WarmhComponent,
     RpiComponent,
-    LanguageComponent
+    LanguageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,9 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     MatListModule,
     MatTabsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebase),
     ],
   providers: [],
   bootstrap: [AppComponent]
