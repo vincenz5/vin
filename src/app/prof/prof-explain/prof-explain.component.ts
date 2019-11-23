@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfExplainComponent implements OnInit {
 
-  constructor() { }
+  // constructor( public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+  //   @Inject(MAT_DIALOG_DATA) public data: DialogData ) { }
 
   ngOnInit() {
   }

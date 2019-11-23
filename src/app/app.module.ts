@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ProfExplainComponent } from './prof/prof-explain/prof-explain.component';
+import { WattwattComponent } from './prof/wattwatt/wattwatt.component';
+import { DexgridComponent } from './prof/dexgrid/dexgrid.component';
+import { TeslaComponent } from './prof/tesla/tesla.component';
+import { SolarcComponent } from './prof/solarc/solarc.component';
+import { ArcadisComponent } from './prof/arcadis/arcadis.component';
+import { MonolithComponent } from './prof/monolith/monolith.component';
+import { BaruchComponent } from './prof/baruch/baruch.component';
+import { WarmhComponent } from './prof/warmh/warmh.component';
+import { RpiComponent } from './prof/rpi/rpi.component';
+import { LanguageComponent } from './prof/language/language.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +40,17 @@ import { ProfExplainComponent } from './prof/prof-explain/prof-explain.component
     PhotoComponent,
     SoftwareComponent,
     MainNavComponent,
-    ProfExplainComponent
+    ProfExplainComponent,
+    WattwattComponent,
+    DexgridComponent,
+    TeslaComponent,
+    SolarcComponent,
+    ArcadisComponent,
+    MonolithComponent,
+    BaruchComponent,
+    WarmhComponent,
+    RpiComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +61,7 @@ import { ProfExplainComponent } from './prof/prof-explain/prof-explain.component
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
     MatListModule
     ],
   providers: [],
