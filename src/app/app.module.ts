@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonToggleModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -72,9 +73,10 @@ import { ContactComponent } from './contact/contact.component';
     MatDialogModule,
     MatListModule,
     MatTabsModule,
+    MatButtonToggleModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireModule.initializeApp(environment.firebase),
     ],
   providers: [],
   bootstrap: [AppComponent]

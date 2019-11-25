@@ -32,3 +32,81 @@
       }
     }
 }
+
+.sidenav-container {
+  height: 8%;
+  position: sticky;
+  top: 0;
+}
+
+.sidenav {
+  width: 200px;
+
+
+}
+
+.sidenav {
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+
+
+}
+
+#sidebutton {
+  height: 15%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar {
+  height: 100%;
+}
+
+.mat-toolbar-row {
+  height: 100%;
+
+  @media (max-width: 600px) {
+    height: 100%;
+  }
+}
+
+
+
+#title {
+  text-decoration: none;
+  color: white;
+}
+
+#title:hover {
+  text-decoration: underline;
+}
+
+.links {
+  right: 0;
+  position: absolute;
+  padding-right: 0.8em;
+
+  a {
+    font-size: 0.9em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: white;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
