@@ -1,0 +1,32 @@
+.main {
+    background-color: rgb(20, 20, 22);
+    height: 5em;
+}
+
+#title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+    color: white;
+}
+
+.icons {
+    margin: 0 0.7em;
+    height: 1.5em;
+    width: auto;
+
+    @media (min-width: 600px) {
+        height: 2em;
+        // margin: 0 1.7em;
+    }
+
+    @media (max-width:400px) {
+        margin: 0 0.5em;
+    }
+}
+
+main {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}

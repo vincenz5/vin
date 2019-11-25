@@ -37,6 +37,7 @@ import { LanguageComponent } from './prof/language/language.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ContactComponent } from './contact/contact.component';
+import { BottomComponent } from './bottom/bottom.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ContactComponent } from './contact/contact.component';
     WarmhComponent,
     RpiComponent,
     LanguageComponent,
-    ContactComponent
+    ContactComponent,
+    BottomComponent
   ],
   imports: [
     BrowserModule,

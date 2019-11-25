@@ -1,3 +1,7 @@
+.main {
+    padding-bottom: 6em;
+}
+
 .title {
     display: block;
     margin: 0.5em 1em;
@@ -25,4 +29,11 @@
     margin: 0.5em 1em;
     padding: 1em 1em;
     background-color: rgba(124, 192, 192, 0.329);
+}
+
+app-bottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    margin-top: 2em;
 }
