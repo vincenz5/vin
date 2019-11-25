@@ -1,5 +1,5 @@
 <div class="main">
-    <p>Page Under Construction</p>
+
     <p>Here you'll be able to read up on what I've been writing about, including:</p>
     <ul>
         <li>Economics</li>
@@ -10,181 +10,193 @@
         <li>Learning new skills, like software development or investing</li>
     </ul>
 
-    <hr>
+    <mat-tab-group>
 
-    <div class="card">
-        <h1>Blockchain Knowledge</h1>
+        <mat-tab label="Blockchain">
+            <div class="card">
+                <h1>Blockchain Knowledge</h1>
 
-        <p>A blockchain is based on a set of rules that enforce an accounting system accounting for balances, like on Bitcoin,
-            plus states, like on Ethereum. The system of rules is designed in a method that follows game theory (actually
-            mechanism design but that's not common knowledge).</p>
+                <p>A blockchain is based on a set of rules that enforce an accounting system accounting for balances, like on
+                    Bitcoin, plus states, like on Ethereum. The system of rules is designed in a method that follows game
+                    theory (actually mechanism design but that's not common knowledge).</p>
 
-        <p>The rules set forth by the protocol of a blockchain are intended to both coordinate the verifiers of new sets of
-            data (miners) but also pit them up against each other so they cannot make up data. If they could make up data,
-            they could increase the balance of their own wallets or decrease those of others.</p>
+                <p>The rules set forth by the protocol of a blockchain are intended to both coordinate the verifiers of new
+                    sets of data (miners) but also pit them up against each other so they cannot make up data. If they could
+                    make up data, they could increase the balance of their own wallets or decrease those of others.</p>
 
-        <p>What this specifically solves is problems like double spending and lack of transparency. Since transactions cannot
-            be falsified and the blockchain ledger (the data showing all transactions and balances, plus contract code like
-            in virtual machines) is shared among anyone with a running node, it makes for a form of governance of accounting
-            that anyone can rely on without trusting the intentions or abilities of third parties. This compares to the existing
-            methods of the financial system where balances and accounting of the monetary system and debts are held on private
-            ledgers, on corporate and government servers, and transfers are based on faith of the institutions involved. </p>
+                <p>What this specifically solves is problems like double spending and lack of transparency. Since transactions
+                    cannot be falsified and the blockchain ledger (the data showing all transactions and balances, plus contract
+                    code like in virtual machines) is shared among anyone with a running node, it makes for a form of governance
+                    of accounting that anyone can rely on without trusting the intentions or abilities of third parties.
+                    This compares to the existing methods of the financial system where balances and accounting of the monetary
+                    system and debts are held on private ledgers, on corporate and government servers, and transfers are
+                    based on faith of the institutions involved. </p>
 
-        <h4>Bitcoin really has two functions:</h4>
+                <h4>Bitcoin really has two functions:</h4>
 
-        <ul>
-            <li>The first, and certainly best know: accounting of balances of the native currency, Bitcoin, in people's wallets.
-                Wallets are tracked through their wallet addresses, hexadecimal (0 through 9 and a through f) lines (public
-                keys) 26 to 35 characters long. These addresses are controlled by whoever (or whatever) inputs the private
-                key (64 characters long). Something like: E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262</li>
-            <br>
-            <li>The much less known: simple escrow between public addresses.</li>
-        </ul>
+                <ul>
+                    <li>The first, and certainly best know: accounting of balances of the native currency, Bitcoin, in people's
+                        wallets. Wallets are tracked through their wallet addresses, hexadecimal (0 through 9 and a through
+                        f) lines (public keys) 26 to 35 characters long. These addresses are controlled by whoever (or whatever)
+                        inputs the private key (64 characters long). Something like: E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262</li>
+                    <br>
+                    <li>The much less known: simple escrow between public addresses.</li>
+                </ul>
 
-        <h4>Ethereum introduces new functions:</h4>
+                <h4>Ethereum introduces new functions:</h4>
 
-        <ul>
-            <li>Smart contracts that can be encoded through the use of Solidity, and compiled into bytecode to run on the Ethereum
-                Virtual Machine that is verified by Ethereum miners. These contracts are self enforcing, which means they
-                can follow their own encoded commands based on the predetermined rules programmed into them by their authors. </li>
-            <br>
-            <li>Escrow contracts that can include functions like time or conditional lockup. </li>
-            <br>
-            <li>Roles and permissions can be set in immutable code on these contracts, allowing for reduction in corruption and
-                improved tools for transparency of governance. </li>
-            <br>
-            <li>Tradable or non tradable tokens that are transferable between addresses with the permission of the governing
-                smart contract.
-            </li>
-            <br>
-            <li>State channels: contracts that govern the transaction between at least two addresses. These can be used to govern
-                payments or other forms of state. These channel contracts can be encoded to accept off-chain messages that
-                are signed by the private keys of the addresses involved in the transaction and enforcement of payments,
-                for example, can be enforced through collateral locked up by the smart contract and only released according
-                to the rules encoded in the contract. This allows for multiple parties to interact without having the initiate
-                and wait for on-chain transactions every time while still relying on self-enforcement of smart contracts
-                and the immutability of a blockchain.
-            </li>
-            <br>
-            <li>Coordination of voting and execution of governance mandates set by decentralized organizations of people and entities. </li>
-            <br>
-            <li>Decentralization of exchanges and methods of price discovery. For example, one can set up a blind auction model
-                where players can read the Solidity code regulating the auction but cannot see what everyone else is offering
-                during the auction. Also, a contract exchange can be set up to hold tokens or Ether in escrow during trades. </li>
-            <br>
-            <li>Trustless operation of opening and closing of sidechains, where parties can enter and leave by staking something
-                in a contract on the mainchain to enter into the sidechain but verification of transactions and other changes
-                of state or storage on the sidechain is verified according to the specific rules of that sidechain. For example,
-                xDai is a sidechain where Dai tokens from the mainchain can be employed on the sidechain, with a proof of
-                authority protocol (reduced security) but almost instant transactions at almost no cost. </li>
-        </ul>
+                <ul>
+                    <li>Smart contracts that can be encoded through the use of Solidity, and compiled into bytecode to run on
+                        the Ethereum Virtual Machine that is verified by Ethereum miners. These contracts are self enforcing,
+                        which means they can follow their own encoded commands based on the predetermined rules programmed
+                        into them by their authors. </li>
+                    <br>
+                    <li>Escrow contracts that can include functions like time or conditional lockup. </li>
+                    <br>
+                    <li>Roles and permissions can be set in immutable code on these contracts, allowing for reduction in corruption
+                        and improved tools for transparency of governance. </li>
+                    <br>
+                    <li>Tradable or non tradable tokens that are transferable between addresses with the permission of the governing
+                        smart contract.
+                    </li>
+                    <br>
+                    <li>State channels: contracts that govern the transaction between at least two addresses. These can be used
+                        to govern payments or other forms of state. These channel contracts can be encoded to accept off-chain
+                        messages that are signed by the private keys of the addresses involved in the transaction and enforcement
+                        of payments, for example, can be enforced through collateral locked up by the smart contract and
+                        only released according to the rules encoded in the contract. This allows for multiple parties to
+                        interact without having the initiate and wait for on-chain transactions every time while still relying
+                        on self-enforcement of smart contracts and the immutability of a blockchain.
+                    </li>
+                    <br>
+                    <li>Coordination of voting and execution of governance mandates set by decentralized organizations of people
+                        and entities. </li>
+                    <br>
+                    <li>Decentralization of exchanges and methods of price discovery. For example, one can set up a blind auction
+                        model where players can read the Solidity code regulating the auction but cannot see what everyone
+                        else is offering during the auction. Also, a contract exchange can be set up to hold tokens or Ether
+                        in escrow during trades. </li>
+                    <br>
+                    <li>Trustless operation of opening and closing of sidechains, where parties can enter and leave by staking
+                        something in a contract on the mainchain to enter into the sidechain but verification of transactions
+                        and other changes of state or storage on the sidechain is verified according to the specific rules
+                        of that sidechain. For example, xDai is a sidechain where Dai tokens from the mainchain can be employed
+                        on the sidechain, with a proof of authority protocol (reduced security) but almost instant transactions
+                        at almost no cost.
+                    </li>
+                </ul>
 
-        <div class="video">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/XatEoU36U-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+                <div class="video">
+                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/XatEoU36U-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
 
-        </div>
-    </div>
+                </div>
+            </div>
+        </mat-tab>
 
-    <hr>
+        <mat-tab label="Software">
+            <div>
+                <h2>JavaScript</h2>
+                <h5>A language for controlling specific parts of a website.</h5>
+                <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+                <h5>Accepted by the user's browser natively.</h5>
+                <p>Allows the developer of a website to do things like:</p>
+                <ul>
+                    <li>Edit specific parts of the website.</li>
+                    <li>Have the website react to actions taken by the website visitor or other specified events.</li>
+                    <li>Connect the website over to the backend server software of the website or even a completely different
+                        entity. (APIs)
+                    </li>
+                </ul>
 
-    <div>
-        <h2>JavaScript</h2>
-        <h5>A language for controlling specific parts of a website.</h5>
-        <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
-        <h5>Accepted by the user's browser natively.</h5>
-        <p>Allows the developer of a website to do things like:</p>
-        <ul>
-            <li>Edit specific parts of the website.</li>
-            <li>Have the website react to actions taken by the website visitor or other specified events.</li>
-            <li>Connect the website over to the backend server software of the website or even a completely different entity.
-                (APIs)
-            </li>
-        </ul>
+            </div>
+<hr>
+            <div class="card">
+                <h2>TypeScript</h2>
+                <h5>A language that is converted into plain JavaScript once it is on the browser of the website visitor. (Transpiled)</h5>
+                <p>Differences from JavaScript:</p>
+                <ul>
+                    <li>Extension of file is .ts instead of .js</li>
+                    <li>It's sort of like SCSS for CSS. It's just a developer tool to build more robust JavaScript and having
+                        an easier time catching errors.</li>
+                    <li>It makes it easier for the programmer to catch errors before running, while typing the code.</li>
+                    <li>Still accepts JavaScript libraries</li>
+                    <li>TypeScript infers types for variables that aren't explicitally written by the developer.</li>
+                    <li>It is an object oriented language, making it more like backend languages like Python or other languages
+                        that allow for automation of processes.</li>
+                    <li>JavaScript, instead, is a scripting language, which means it is a program controlling another program.
+                        JavaScript on the front end is controlling the web browser being used to view the website.</li>
+                    <li>Scripting languages are interpreted down to something like bytecode, not compiled all the way down to
+                        machine code. This is what makes it 'higher level'. The web browser program is 'lower level', meaning
+                        it compiles down into machine code.</li>
+                    <li>It is a statically typed language, which means the program cannot work around the type system of the
+                        language and the program is checked before execution.</li>
+                    <li>The program may be rejected before even starting but it won't run outside the language type.</li>
+                    <li>The opposite is dynamically type language, which just runs the program even if there will be errors.</li>
+                    <li>In statically typed language, the type is bound to the variable while dynamically typed languages bound
+                        the type to the value.</li>
+                    <p>As an example:</p>
+                    <li>string a = "blah"</li>
+                    <li>In TypeScript, a will always remain a string. The value of s ("blah") may change during its life but
+                        it will never change to an integer or a Boolean, for example. </li>
+                    <li>If TypeScript is not compatible with the browser because of its ES6 features, it will compile down into
+                        ES3, ES4, or ES5 for compatibility. </li>
+                    <li>TypeScript does not work with abstract classes. </li>
+                </ul>
 
-    </div>
+            </div>
 
-    <div class="card">
-        <h2>TypeScript</h2>
-        <h5>A language that is converted into plain JavaScript once it is on the browser of the website visitor. (Transpiled)</h5>
-        <p>Differences from JavaScript:</p>
-        <ul>
-            <li>Extension of file is .ts instead of .js</li>
-            <li>It's sort of like SCSS for CSS. It's just a developer tool to build more robust JavaScript and having an easier
-                time catching errors.</li>
-            <li>It makes it easier for the programmer to catch errors before running, while typing the code.</li>
-            <li>Still accepts JavaScript libraries</li>
-            <li>TypeScript infers types for variables that aren't explicitally written by the developer.</li>
-            <li>It is an object oriented language, making it more like backend languages like Python or other languages that
-                allow for automation of processes.</li>
-            <li>JavaScript, instead, is a scripting language, which means it is a program controlling another program. JavaScript
-                on the front end is controlling the web browser being used to view the website.</li>
-            <li>Scripting languages are interpreted down to something like bytecode, not compiled all the way down to machine
-                code. This is what makes it 'higher level'. The web browser program is 'lower level', meaning it compiles
-                down into machine code.</li>
-            <li>It is a statically typed language, which means the program cannot work around the type system of the language
-                and the program is checked before execution.</li>
-            <li>The program may be rejected before even starting but it won't run outside the language type.</li>
-            <li>The opposite is dynamically type language, which just runs the program even if there will be errors.</li>
-            <li>In statically typed language, the type is bound to the variable while dynamically typed languages bound the
-                type to the value.</li>
-            <p>As an example:</p>
-            <li>string a = "blah"</li>
-            <li>In TypeScript, a will always remain a string. The value of s ("blah") may change during its life but it will
-                never change to an integer or a Boolean, for example. </li>
-            <li>If TypeScript is not compatible with the browser because of its ES6 features, it will compile down into ES3,
-                ES4, or ES5 for compatibility. </li>
-            <li>TypeScript does not work with abstract classes. </li>
-        </ul>
+        </mat-tab>
 
-    </div>
+        <mat-tab label="Personal">
+            <div>
+                <h1>Daily Meditation Techniques Following Marcus Aurelius’ Meditations</h1>
+                <menu type="context">
+                    <p> 1. Contemplation of the Sage</p>
+                    <p class="letter"> a. Look up to the character traits of either:</p>
+                    <p class="numeral"> i. Someone you look up to, specifically looking up to their character traits</p>
+                    <p class="numeral"> ii. Who you want yourself to be, specifically what are the character traits of the person you want yourself
+                        to be</p>
+                    <p> 2. Look from above</p>
+                    <p class="letter"> a. Zoom out from yourself into third person</p>
+                    <p class="letter"> b. Continue to zoom out even further</p>
+                    <p class="letter"> c. Zoom out to a worldwide third person view of what's around you</p>
+                    <p class="letter"> d. Build out perspective of yourself based on everything else</p>
+                    <p class="letter"> e. Disassociate yourself from your emotions</p>
+                    <p class="letter"> f. Focus on this when making decisions</p>
+                    <p> 3. Exercise</p>
+                    <p class="letter"> a. Not for physical benefits but for mental benefits</p>
+                    <p> 4. Meditation</p>
+                    <p class="letter"> a. Focus on not reacting to your emotions without thought</p>
+                    <p> 5. Review of the day</p>
+                    <p class="letter"> a. Look back on the day and on your actions</p>
+                    <p class="letter"> b. Congratulate yourself for the good things you did to reinforce them
+                    </p>
+                    <p class="letter"> c. Identify the problems and where you went wrong</p>
+                    <p class="letter"> d. Focus on not doing the problematic actions the next day</p>
+                    <p class="letter"> e. Eliminate the rationalizations you give yourself that lead to the problematic actions</p>
+                    <p class="letter"> f. Check on whether you're in track to #1 and what you need to do different</p>
+                    <p> 6. Journaling</p>
+                    <p class="letter"> a. Make it into a habit</p>
+                    <p class="letter"> b. Define the problem you're having and consider it objectively</p>
+                    <p> Effects:</p>
+                    <p> Feel more happy and fulfilled because you focus on the things you need to do and you truly are fulfilled
+                        by. Your accomplishments will make you more confident.</p>
 
-    <hr>
+                </menu>
 
-    <div>
-        <h1>Daily Meditation Techniques Following Marcus Aurelius’ Meditations</h1>
-        <menu type="context">
-            <p> 1. Contemplation of the Sage</p>
-            <p class="letter"> a. Look up to the character traits of either:</p>
-            <p class="numeral"> i. Someone you look up to, specifically looking up 
-                to their character traits</p>
-            <p class="numeral"> ii. Who you want yourself to be, specifically what are the character traits of the person you want yourself
-            to be</p>
-            <p> 2. Look from above</p>
-            <p class="letter"> a. Zoom out from yourself into third person</p>
-            <p class="letter"> b. Continue to zoom out even further</p>
-            <p class="letter"> c. Zoom out to a worldwide third person view of what's around you</p>
-            <p class="letter"> d. Build out perspective of yourself based on everything else</p>
-            <p class="letter"> e. Disassociate yourself from your emotions</p>
-            <p class="letter"> f. Focus on this when making decisions</p>
-            <p> 3. Exercise</p>
-            <p class="letter"> a. Not for physical benefits but for mental benefits</p>
-            <p> 4. Meditation</p>
-            <p class="letter"> a. Focus on not reacting to your emotions without thought</p>
-            <p> 5. Review of the day</p>
-            <p class="letter"> a. Look back on the day and on your actions</p>
-            <p class="letter"> b. Congratulate yourself for the good things you did to reinforce 
-                them</p>
-            <p class="letter"> c. Identify the problems and where you went wrong</p>
-            <p class="letter"> d. Focus on not doing the problematic actions the next day</p>
-            <p class="letter"> e. Eliminate the rationalizations you give yourself that lead 
-                to the problematic actions</p>
-            <p class="letter"> f. Check on whether you're in track to #1 and what you need to 
-                do different</p>
-            <p> 6. Journaling</p>
-            <p class="letter"> a. Make it into a habit</p>
-            <p class="letter"> b. Define the problem you're having and consider it objectively</p>
-            <p> Effects:</p>
-            <p> Feel more happy and fulfilled because you focus on the things you need to do and you truly are fulfilled by.
-            Your accomplishments will make you more confident.</p>
-            
-        </menu>
+                <div>
+                    <p id="title1">Some historical context on Stoicism</p>
+                    <p>Founded by Zeno of Citium back in the Hellenic period of Ancient Greece (334 BC).</p>
+                    <p> Zeno was wealthy but lived a simple life</p>
+                    <p>Meditations of Marcus Aurelius (not the original title) was written by Marcus on campaign, in Greek.</p>
+                </div>
+            </div>
+        </mat-tab>
 
-        <div>
-            <p id="title1">Some historical context on Stoicism</p>
-            <p>Founded by Zeno of Citium back in the Hellenic period of Ancient Greece (334 BC).</p>
-            <p> Zeno was wealthy but lived a simple life</p>
-            <p>Meditations of Marcus Aurelius (not the original title) was written by Marcus on campaign, in Greek.</p>
-        </div>
-    </div>
+        <mat-tab label="Economics">
+            <p>Blank for now...</p>
+        </mat-tab>
+
+    </mat-tab-group>
 </div>
