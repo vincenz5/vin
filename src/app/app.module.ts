@@ -38,6 +38,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
+import { SustainComponent } from './prof/sustain/sustain.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { BottomComponent } from './bottom/bottom.component';
     RpiComponent,
     LanguageComponent,
     ContactComponent,
-    BottomComponent
+    BottomComponent,
+    SustainComponent
   ],
   imports: [
     BrowserModule,

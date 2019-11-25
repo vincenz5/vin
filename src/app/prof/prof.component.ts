@@ -13,6 +13,7 @@ import { RpiComponent } from 'src/app/prof/rpi/rpi.component';
 import { SolarcComponent } from 'src/app/prof/solarc/solarc.component';
 import { TeslaComponent } from 'src/app/prof/tesla/tesla.component';
 import { WarmhComponent } from 'src/app/prof/warmh/warmh.component';
+import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
 
 
 @Component({
@@ -33,6 +34,16 @@ export class ProfComponent implements OnInit {
   openExplain(): void {
     const dialogRef = this.dialog.open( ProfExplainComponent, {
       width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Closed');
+    })
+  }
+
+  openSustain(): void {
+    const dialogRef = this.dialog.open( SustainComponent, {
+      width: '90%', maxWidth: '90%'
     });
 
     dialogRef.afterClosed().subscribe(result => {

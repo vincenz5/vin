@@ -16,6 +16,7 @@ import { RpiComponent } from 'src/app/prof/rpi/rpi.component';
 import { SolarcComponent } from 'src/app/prof/solarc/solarc.component';
 import { TeslaComponent } from 'src/app/prof/tesla/tesla.component';
 import { WarmhComponent } from 'src/app/prof/warmh/warmh.component';
+import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
 
 
 
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'solarc', component: SolarcComponent },
   { path: 'tesla', component: TeslaComponent },
   { path: 'warmh', component: WarmhComponent },
+  { path: 'sustain', component: SustainComponent },
   { path: 'software', component: SoftwareComponent }
 ];
 
