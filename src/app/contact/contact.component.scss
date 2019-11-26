@@ -1,3 +1,37 @@
 .emailform {
     background-color: rgb(146, 139, 139);
 }
+
+.form-group {
+    height: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 1.2em;
+
+    input {
+        border-radius: 0.4em;
+        height: 100%;
+        width: 100%;
+        padding-left: 0.8em;
+        font-size: 1em;
+    }
+}
+
+form {
+    padding-right: 2em;
+}
+
+#message {
+    height: 5em;
+    width: 100%;
+
+    input {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.submit {
+    height: 100%;
+    width: 40%;
+    background-color: rgb(83, 83, 170);
+}

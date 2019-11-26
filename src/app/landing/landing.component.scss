@@ -22,6 +22,7 @@
 .contact {
     display: block;
     margin: 0.5em 1em;
+    text-align: center;
 }
 
 .work {
@@ -40,4 +41,7 @@ app-bottom {
 
 .message {
     height: 3em;
+    background-color: black;
+    color: white;
+    border-radius: 1.2em;
 }
