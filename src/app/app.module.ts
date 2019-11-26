@@ -6,6 +6,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
+import { firestore } from 'firebase/app';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from "@angular/fire/storage";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +44,7 @@ import { environment } from '../environments/environment';
 import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { SustainComponent } from './prof/sustain/sustain.component';
+import { AddtofireService } from 'src/app/service/addtofire.service';
 
 @NgModule({
   declarations: [
@@ -79,10 +85,14 @@ import { SustainComponent } from './prof/sustain/sustain.component';
     MatTabsModule,
     MatButtonToggleModule,
     ReactiveFormsModule,
+    FormsModule,
+    AngularFirestoreModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // AngularFireModule.initializeApp(environment.firebase),
     ],
-  providers: [],
+  providers: [AngularFirestore, AddtofireService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

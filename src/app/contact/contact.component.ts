@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-// import { AngularFireDatabaseModule, AngularFireObject, AngularFireList } from 'angularfire2/database';
+import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { NgForm, FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule, AngularFireObject, AngularFireList } from 'angularfire2/database';
+import { AddtofireService } from '../service/addtofire.service';
 
 
 @Component({
@@ -14,32 +16,20 @@ export class ContactComponent implements OnInit {
 
   // form: FormGroup;
 
-  // constructor(private fb: FormBuilder, private af: AngularFireModule, private db: AngularFirestore) {
-  //   this.createForm();
-  // }
+  constructor(public _fireservice: AddtofireService, private fb: FormBuilder, private af: AngularFireModule, private db: AngularFirestore) {}
 
   ngOnInit() {
   }
 
-  // createForm() {
-  //   this.form = this.fb.group({
-  //     name: ['', Validators.required],
-  //     email: ['', Validators.required],
-  //     message: ['', Validators.required],
-  //   });
-  // }
+  public contact = {
+    message: ''
+  }
 
-  // onSubmit() {
-  //   const {name, email, message} = this.form.value;
-  //   // const date = Date();
-  //   const html = `
-  //     <div>From: ${name}</div>
-  //     <div>Email: <a href="mailto:${email}">${email}</a></div>
-  //     <div>Message: ${message}</div>
-  //   `;
-  //   let formRequest = { name, email, message, html };
-  //   // this.db.collection("vincenz").list('/messages').push(formRequest);
-  //   this.form.reset();
-  // }
+  form: NgForm
+  
+  onSubmit(form: NgForm){
+      this._fireservice.onSubmit(form);
+      // this.notificationService.success(':: Application Pending! (Esc to close)');
+  }
 
 }

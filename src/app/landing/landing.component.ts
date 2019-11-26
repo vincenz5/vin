@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+
 import { ContactComponent } from '../contact/contact.component';
 import { BottomComponent } from '../bottom/bottom.component';
+
 
 @Component({
   selector: 'app-landing',
@@ -9,9 +13,21 @@ import { BottomComponent } from '../bottom/bottom.component';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  @Inject(MAT_DIALOG_DATA) private data: any;
+
+  constructor( private dialog: MatDialog ) { }
 
   ngOnInit() {
+  }
+
+  message(): void {
+    const dialogRef = this.dialog.open( ContactComponent, {
+      width: '90%', maxWidth: '90%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Closed');
+    })
   }
 
 }
