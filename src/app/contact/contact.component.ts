@@ -28,6 +28,8 @@ export class ContactComponent implements OnInit {
   }
 
   public contact = {
+    name: '',
+    email: '',
     message: ''
   }
 
