@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatSidenavModule } from '@angular/material';
+import { MatSidenavModule, MatGridListModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
@@ -80,9 +81,11 @@ import { AddtofireService } from 'src/app/service/addtofire.service';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
     MatDialogModule,
     MatListModule,
     MatTabsModule,
+    MatGridListModule,
     MatButtonToggleModule,
     ReactiveFormsModule,
     FormsModule,
