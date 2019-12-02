@@ -4,13 +4,24 @@
     text-align: center;
 }
 
+mat-grid-tile {
+    border-radius: 1em;
+    padding: 0.3em;
+}
+
 .watt-header-image {
-    background-image: url('../../assets/icons/dexgrid.png');
+    background-image: url('../../assets/icons/wattwatt.png');
     background-size: cover;
   }
 
 .dex-header-image {
     background-image: url('../../assets/icons/dexgrid.png');
+    background-size: cover;
+  }
+
+
+.vin-header-image {
+    background-image: url('../../assets/icons/favicon.png');
     background-size: cover;
   }
 
