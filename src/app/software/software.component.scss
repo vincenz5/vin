@@ -13,6 +13,11 @@
 
 .mat-card {
     margin-top: 1em;
+
+    @media only screen and (max-width: 600px) {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .watt-header-image {
@@ -40,5 +45,7 @@
 
     @media only screen and (max-width: 600px) {
         // display: none;
+        width: 7em;
+        height: auto;
     }
 }
