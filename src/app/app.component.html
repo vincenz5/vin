@@ -1,4 +1,34 @@
+<div class="main">
+    <mat-toolbar class="example-toolbar" id="sidebutton">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a style="text-decoration: none;" href="">
+            <p id="title">Home</p>
+        </a>
 
-<app-main-nav></app-main-nav>
+        <div class="links">
+            <a routerLink="/prof">Professional</a>
+            <a routerLink="/writing">Writing</a>
+            <a routerLink="/photo">Photography</a>
+            <a routerLink="/software">Software</a>
+        </div>
+    </mat-toolbar>
 
-<router-outlet></router-outlet>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #snav class="sidenav" fixedInViewport>
+            <mat-nav-list class="sidenavcontent">
+                <a mat-list-item routerLink="/prof">Professional Profile</a>
+                <a mat-list-item routerLink="/writing">Writing</a>
+                <a mat-list-item routerLink="/photo">Photography</a>
+                <a mat-list-item routerLink="/software">Software</a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+<app-bottom></app-bottom>

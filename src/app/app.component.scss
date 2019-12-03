@@ -1,54 +1,40 @@
-.drawer {
-    background: #ececec;
-    display: none;
-    @media only screen and (max-width: 650px) {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 15em;
-    }
-    & section {
-      & a {
-        margin: 1em 4em 0 1em;
-        width: 50%;
-        color: red;
-        word-wrap: break-word;
-        display: block;
-      }
+// .main {
+//   height: 100%;
+// }
 
-      a:visited {
-        color: black;
-        border-bottom: 1px solid #355a7a3b;
-      }
-      & a:hover {
-        // background-color: var(--ea-color-background-2);
-        color: white;
-      }
-      & .mobile {
-        @media only screen and (min-width: 640px) {
-          display: none;
-        }
-        @media only screen and (max-width: 640px) {
-          display: block;
-        }
-      }
-    }
+router-outlet {
+  height: 100%;
+}
+
+app-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
 }
 
 .sidenav-container {
   height: 8%;
   position: sticky;
   top: 0;
+  overflow: visible;
 }
 
 .sidenav {
   width: 200px;
-
+  z-index: 5;
 
 }
 
 .sidenav {
   @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.mat-icon-button {
+  @media screen and (min-width: 600px) {
     display: none;
   }
 }

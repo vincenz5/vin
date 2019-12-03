@@ -2,16 +2,23 @@
     margin: 0 1em;
     display: block;
     text-align: center;
+    padding-bottom: 8em;
 }
 
-mat-grid-tile {
-    border-radius: 1em;
-    padding: 0.3em;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(var(--ea-grid-col-min-width,22em),var(--ea-grid-col-max-width,1fr)));
+    grid-gap: var(--ea-grid-gap,1.5em);
+}
+
+.mat-card {
+    margin-top: 1em;
 }
 
 .watt-header-image {
     background-image: url('../../assets/icons/wattwatt.png');
     background-size: cover;
+    margin-top: 0.5em;
   }
 
 .dex-header-image {
@@ -28,4 +35,10 @@ mat-grid-tile {
 .mat-card-image {
     height: 10em;
     width: auto;
+    margin: 0.5em 0em 0.8em 0em;
+    padding: 0em 1em;
+
+    @media only screen and (max-width: 600px) {
+        // display: none;
+    }
 }
