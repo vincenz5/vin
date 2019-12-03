@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatSidenavModule, MatGridListModule } from '@angular/material';
+import { MatSidenavModule, MatGridListModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
+import { MatSnackBarModule } from "@angular/material";
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
@@ -87,6 +89,9 @@ import { AddtofireService } from 'src/app/service/addtofire.service';
     MatTabsModule,
     MatGridListModule,
     MatButtonToggleModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatInputModule,
     ReactiveFormsModule,
     FormsModule,
     AngularFirestoreModule,

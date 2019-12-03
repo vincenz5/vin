@@ -10,23 +10,52 @@
 </section> -->
 
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-    <div class="form-group">
-        <input name="name" #size="ngModel" [(ngModel)]="contact.name" class="form-control" placeholder="Name">
-    </div>
+  <div class="form-group">
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input value="name" #name name="name" #size="ngModel" [(ngModel)]="contact.name" class="form-control" matInput placeholder="Name">
+        <mat-icon matSuffix>face</mat-icon>
+      </mat-form-field>
+    </p>
+  </div>
 
-    <div class="form-group">
-        <input name="email" #size="ngModel" [(ngModel)]="contact.email" class="form-control" placeholder="Email Address">
-    </div>
+  <div class="form-group">
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input name="email" #size="ngModel" [(ngModel)]="contact.email" class="form-control" matInput placeholder="Email">
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+    </p>
+  </div>
 
-    <div id="message" class="form-group">
-        <input name="message" #size="ngModel" [(ngModel)]="contact.message" class="form-control" placeholder="Message">
-    </div>
+  <div class="form-group">
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Message</mat-label>
+        <input name="messafe" #size="ngModel" [(ngModel)]="contact.message" class="form-control" matInput placeholder="Message">
+        <mat-icon matSuffix>chat</mat-icon>
+      </mat-form-field>
+    </p>
+  </div>
 
-    <div class="form-group" style="background-color: rgb(105, 107, 226);
-    width: 50%;
-    text-align: center;">
-        <button style="background-color: rgb(105, 107, 226); border-color: rgb(105, 107, 226); width: 100%; border-radius: 1.4em;" class="submit" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
-    </div>
+
+
+  <!-- <div class="form-group">
+    <input name="email" #size="ngModel" [(ngModel)]="contact.email" class="form-control" placeholder="Email Address">
+  </div>
+
+  <div id="message" class="form-group">
+    <input name="message" #size="ngModel" [(ngModel)]="contact.message" class="form-control" placeholder="Message">
+  </div> -->
+
+  <div class="form-group">
+    <button mat-raised-button
+      class="submit" type="submit" [disabled]="form.invalid"
+      (click)="openSnackBar(message.value, action.value)"
+      >SUBMIT</button>
+  </div>
 
 
 </form>

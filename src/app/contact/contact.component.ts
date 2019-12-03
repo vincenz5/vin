@@ -6,7 +6,8 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { AngularFireDatabaseModule, AngularFireObject, AngularFireList } from 'angularfire2/database';
 import { AddtofireService } from '../service/addtofire.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
-import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig, MatFormFieldModule } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   constructor(public _fireservice: AddtofireService, private fb: FormBuilder, 
     private af: AngularFireModule, private db: AngularFirestore,
-    private dialog: MatDialog 
+    private dialog: MatDialog, private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -45,6 +46,15 @@ export class ContactComponent implements OnInit {
       // dialogRef.afterClosed().subscribe(result => {
       //   console.log('Closed');
       // })
+  }
+
+  message = "Submitted. I'll reach out soon!";
+  action = "Close";
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(this.message, this.action, {
+      duration: 4000,
+    });
   }
 
 }

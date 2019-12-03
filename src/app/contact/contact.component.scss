@@ -4,8 +4,9 @@
 
 .form-group {
     height: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     border-radius: 1.2em;
+    width: 100%;
 
     input {
         border-radius: 0.4em;
@@ -14,6 +15,10 @@
         padding-left: 0.8em;
         font-size: 1em;
     }
+}
+
+.mat-form-field {
+    width: 100%;
 }
 
 form {
@@ -31,7 +36,15 @@ form {
 }
 
 .submit {
-    height: 100%;
-    width: 40%;
-    background-color: rgb(83, 83, 170);
+    // height: 100%;
+    // width: 40%;
+    // background-color: rgb(83, 83, 170);
+    // background-color: rgb(105, 107, 226); 
+    // border-color: rgb(105, 107, 226); 
+    // width: 100%; 
+    // border-radius: 1.4em;
+}
+
+.submit:hover {
+    // padding: 0.3em;
 }
