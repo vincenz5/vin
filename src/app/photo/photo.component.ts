@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule, MatTab } from '@angular/material/tabs';
+
 
 @Component({
   selector: 'app-photo',

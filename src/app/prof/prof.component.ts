@@ -14,6 +14,7 @@ import { SolarcComponent } from 'src/app/prof/solarc/solarc.component';
 import { TeslaComponent } from 'src/app/prof/tesla/tesla.component';
 import { WarmhComponent } from 'src/app/prof/warmh/warmh.component';
 import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
+import { MatIconModule, MatIcon } from '@angular/material/icon';
 
 
 @Component({

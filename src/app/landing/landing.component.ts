@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
-
+import { MatButtonModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ContactComponent } from '../contact/contact.component';
 import { BottomComponent } from '../bottom/bottom.component';
 

@@ -49,3 +49,12 @@
         height: auto;
     }
 }
+
+.web-link {
+    color: white;
+    text-decoration: none;
+}
+
+.web-link:hover {
+    text-decoration: underline;
+}

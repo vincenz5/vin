@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { MatCardModule, MatCardTitle, MatCard } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({

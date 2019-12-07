@@ -1,14 +1,3 @@
-<!-- <section class="emailform">
-    <h1>Information Request</h1>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Name" formControlName="name">
-        <input type="text" placeholder="Email" formControlName="email">
-        <textarea placeholder="Message" formControlName="message"></textarea>
-
-        <button type="submit" [disabled]="form.invalid">Submit</button>
-    </form>
-</section> -->
-
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <div class="form-group">
     <p>
@@ -39,16 +28,6 @@
       </mat-form-field>
     </p>
   </div>
-
-
-
-  <!-- <div class="form-group">
-    <input name="email" #size="ngModel" [(ngModel)]="contact.email" class="form-control" placeholder="Email Address">
-  </div>
-
-  <div id="message" class="form-group">
-    <input name="message" #size="ngModel" [(ngModel)]="contact.message" class="form-control" placeholder="Message">
-  </div> -->
 
   <div class="form-group">
     <button mat-raised-button
