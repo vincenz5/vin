@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ContactComponent } from '../contact/contact.component';
 import { BottomComponent } from '../bottom/bottom.component';
+import * as firebase from 'firebase/app'
 
 
 @Component({

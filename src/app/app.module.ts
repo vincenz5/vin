@@ -10,7 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
-import { firestore } from 'firebase/app';
+// import { firestore } from 'firebase/app';
+import * as firebase from 'firebase/app'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from "@angular/fire/storage";
