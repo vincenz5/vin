@@ -25,6 +25,37 @@ export class TcrComponent implements OnInit {
   ngOnInit() {
   }
 
+  apply = async () => {
+    console.log("Applying!");
+    let _amount: number;
+    _amount = 10;
+    let _listinghash = "0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCC";
+    let _data = "data";
+
+    let provider = ethers.getDefaultProvider('rinkeby');
+    const privateKey = "7DCD03EF7449D63A472DEECFDFE916942E43092329E190407C6C07F3D87A8703";
+    let wallet = new ethers.Wallet(privateKey, provider);
+    let walletWithProvider = new ethers.Wallet(privateKey, provider);
+    const tcrContract = "0xB40cF85B94E2b68efa799cEA1F5e9bF095E42b63";
+
+    let abi = [
+      'function apply(bytes32 _listingHash, uint _amount, string _data) external'
+    ]
+
+    let contract = new ethers.Contract(tcrContract, abi, provider);
+    let contractWithSigner = new Contract(tcrContract, abi, wallet);
+
+    let overrides = {
+      gasLimit: 7500000
+    }
+
+    let tx = await contractWithSigner.apply(_listinghash, _amount, _data, overrides);
+    console.log(tx.hash);
+
+    await tx.wait();
+
+  }
+
   transfer = async () => {
     console.log("Transfering!");
     let amount: number;
