@@ -18,6 +18,7 @@ import { TeslaComponent } from 'src/app/prof/tesla/tesla.component';
 import { WarmhComponent } from 'src/app/prof/warmh/warmh.component';
 import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
 import { ContactComponent } from 'src/app/contact/contact.component';
+import { TcrComponent } from 'src/app/software/tcr/tcr.component';
 
 
 
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'warmh', component: WarmhComponent },
   { path: 'sustain', component: SustainComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'tcr', component: TcrComponent },
   { path: 'software', component: SoftwareComponent }
 ];
 

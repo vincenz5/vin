@@ -15,6 +15,7 @@ import * as firebase from 'firebase/app'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from "@angular/fire/storage";
+import { ethers } from 'ethers';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -49,6 +50,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { SustainComponent } from './prof/sustain/sustain.component';
 import { AddtofireService } from 'src/app/service/addtofire.service';
+import { TcrComponent } from './software/tcr/tcr.component';
 
 
 @NgModule({
@@ -74,7 +76,8 @@ import { AddtofireService } from 'src/app/service/addtofire.service';
     LanguageComponent,
     ContactComponent,
     BottomComponent,
-    SustainComponent
+    SustainComponent,
+    TcrComponent
   ],
   imports: [
     BrowserModule,
