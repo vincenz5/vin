@@ -29,7 +29,7 @@ export class TcrComponent implements OnInit {
     console.log("Applying!");
     let _amount: number;
     _amount = 10;
-    let _listinghash = "0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCC";
+    let _listingHash = "0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCD";
     let _data = "data";
 
     let provider = ethers.getDefaultProvider('rinkeby');
@@ -49,7 +49,7 @@ export class TcrComponent implements OnInit {
       gasLimit: 7500000
     }
 
-    let tx = await contractWithSigner.apply(_listinghash, _amount, _data, overrides);
+    let tx = await contractWithSigner.apply(_listingHash, _amount, _data, overrides);
     console.log(tx.hash);
 
     await tx.wait();
