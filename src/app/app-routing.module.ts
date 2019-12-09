@@ -19,6 +19,7 @@ import { WarmhComponent } from 'src/app/prof/warmh/warmh.component';
 import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
 import { ContactComponent } from 'src/app/contact/contact.component';
 import { TcrComponent } from 'src/app/software/tcr/tcr.component';
+import { GsapComponent } from 'src/app/software/gsap/gsap.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'sustain', component: SustainComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'tcr', component: TcrComponent },
+  { path: 'gsap', component: GsapComponent },
   { path: 'software', component: SoftwareComponent }
 ];
 

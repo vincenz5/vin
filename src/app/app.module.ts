@@ -51,7 +51,7 @@ import { BottomComponent } from './bottom/bottom.component';
 import { SustainComponent } from './prof/sustain/sustain.component';
 import { AddtofireService } from 'src/app/service/addtofire.service';
 import { TcrComponent } from './software/tcr/tcr.component';
-
+import { GsapComponent } from './software/gsap/gsap.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +77,8 @@ import { TcrComponent } from './software/tcr/tcr.component';
     ContactComponent,
     BottomComponent,
     SustainComponent,
-    TcrComponent
+    TcrComponent,
+    GsapComponent
   ],
   imports: [
     BrowserModule,
