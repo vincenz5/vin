@@ -14,9 +14,11 @@ export class MapComponent implements OnInit {
 
   // Object.getOwnPropertyDescriptor(mapboxgl, "accessToken").set('pk.eyJ1IjoidmluY2VuejUiLCJhIjoiY2szeXk3bWFkMDA2OTNrbnc0ZnF3Z2d3MiJ9.usN6XRCVdk9E-E2OovfCBA');
   map: mapboxgl.Map;
-  style = 'mapbox://styles/mapbox/streets-v11';
-  lat = 37.75;
-  lng = -122.41;
+  style = 'mapbox://styles/vincenz5/ck3z0e2gk29z61cqswmw2uyph';
+  lat = 18.465505;
+  lng = -66.116935;
+  // -66.116935,
+  // 18.465505
 
   ngOnInit() {
     (mapboxgl as any).accessToken = environment.mapbox.accessToken;
