@@ -1,24 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatSidenavModule, MatGridListModule, MatFormFieldModule } from '@angular/material';
-import { MatInputModule } from '@angular/material';
-import { MatDialogModule } from '@angular/material';
-import { MatSnackBarModule } from "@angular/material";
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatButtonToggleModule } from '@angular/material';
-import { MatCardModule } from '@angular/material/card';
-import { AngularFireModule } from 'angularfire2';
+import { AppRoutingModule } from './app-routing.module';
+import { LayoutModule } from '@angular/cdk/layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
+
+// Firebase
+import { AngularFireModule } from 'angularfire2';
 // import { firestore } from 'firebase/app';
 import * as firebase from 'firebase/app'
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from "@angular/fire/storage";
+// import { AngularFireStorageModule } from "@angular/fire/storage";
+
+// Web3
 import { ethers } from 'ethers';
 
-
-import { AppRoutingModule } from './app-routing.module';
+// Components
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -26,13 +24,7 @@ import { ProfComponent } from './prof/prof.component';
 import { WritingComponent } from './writing/writing.component';
 import { PhotoComponent } from './photo/photo.component';
 import { SoftwareComponent } from './software/software.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { ProfExplainComponent } from './prof/prof-explain/prof-explain.component';
 import { WattwattComponent } from './prof/wattwatt/wattwatt.component';
 import { DexgridComponent } from './prof/dexgrid/dexgrid.component';
@@ -44,14 +36,40 @@ import { BaruchComponent } from './prof/baruch/baruch.component';
 import { WarmhComponent } from './prof/warmh/warmh.component';
 import { RpiComponent } from './prof/rpi/rpi.component';
 import { LanguageComponent } from './prof/language/language.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { ContactComponent } from './contact/contact.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { SustainComponent } from './prof/sustain/sustain.component';
-import { AddtofireService } from 'src/app/service/addtofire.service';
 import { TcrComponent } from './software/tcr/tcr.component';
 import { GsapComponent } from './software/gsap/gsap.component';
+// Services
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { AddtofireService } from 'src/app/service/addtofire.service';
+import { environment } from '../environments/environment';
+
+// Angular Materials
+import { MatSidenavModule, MatGridListModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
+import { MatSnackBarModule } from "@angular/material";
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonToggleModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  trigger,
+  transition,
+  style,
+  query,
+  group,
+  animateChild,
+  animate,
+  keyframes,
+} from '@angular/animations';
+import { MapComponent } from './software/map/map.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +96,8 @@ import { GsapComponent } from './software/gsap/gsap.component';
     BottomComponent,
     SustainComponent,
     TcrComponent,
-    GsapComponent
+    GsapComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

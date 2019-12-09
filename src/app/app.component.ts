@@ -2,11 +2,30 @@ import { Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, OnDestroy} from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slider, transformer, fader, stepper } from './route-animations';
+// import {
+//   trigger,
+//   transition,
+//   style,
+//   query,
+//   group,
+//   animateChild,
+//   animate,
+//   keyframes,
+// } from '@angular/animations';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [ // <-- add your animations here
+    fader
+    // slider,
+    // transformer,
+    // stepper
+  ]
 })
 export class AppComponent {
   title = 'vin';
@@ -20,6 +39,10 @@ export class AppComponent {
   
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   
 }

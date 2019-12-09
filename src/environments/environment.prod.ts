@@ -9,5 +9,8 @@ export const environment = {
       messagingSenderId: "770366897246",
       appId: "1:770366897246:web:23f8e8fc782ff5171248cf",
       measurementId: "G-YCK0WBWHQ9"
+    },
+    mapbox: {
+      accessToken: 'pk.eyJ1IjoidmluY2VuejUiLCJhIjoiY2szeXhxdm5oMDZ5OTNzbjB4ajJhcjVsdyJ9.RlV2L0eupO6K3PSN6A4-Ow'
     }
   };

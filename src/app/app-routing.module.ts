@@ -20,16 +20,17 @@ import { SustainComponent } from 'src/app/prof/sustain/sustain.component';
 import { ContactComponent } from 'src/app/contact/contact.component';
 import { TcrComponent } from 'src/app/software/tcr/tcr.component';
 import { GsapComponent } from 'src/app/software/gsap/gsap.component';
+import { MapComponent } from 'src/app/software/map/map.component';
 
 
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  // { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '', component: LandingComponent },
   { path: 'prof', component: ProfComponent },
-  { path: 'writing', component: WritingComponent },
-  { path: 'photo', component: PhotoComponent },
+  { path: 'writing', component: WritingComponent, data: { animation: 'isRight' } },
+  { path: 'photo', component: PhotoComponent, data: { animation: 'isLeft' } },
   { path: 'prof-explain', component: ProfExplainComponent },
   { path: 'wattwatt', component: WattwattComponent },
   { path: 'arcadis', component: ArcadisComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'tcr', component: TcrComponent },
   { path: 'gsap', component: GsapComponent },
+  { path: 'map', component: MapComponent },
   { path: 'software', component: SoftwareComponent }
 ];
 
