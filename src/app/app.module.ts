@@ -70,6 +70,7 @@ import {
   keyframes,
 } from '@angular/animations';
 import { MapComponent } from './software/map/map.component';
+import { AnimationComponent } from './software/animation/animation.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { MapComponent } from './software/map/map.component';
     SustainComponent,
     TcrComponent,
     GsapComponent,
-    MapComponent
+    MapComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,

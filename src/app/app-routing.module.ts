@@ -26,7 +26,7 @@ import { MapComponent } from 'src/app/software/map/map.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '', component: LandingComponent },
   { path: 'prof', component: ProfComponent },
   { path: 'writing', component: WritingComponent, data: { animation: 'isRight' } },
