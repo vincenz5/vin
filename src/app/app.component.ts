@@ -3,7 +3,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slider, transformer, fader, stepper } from './route-animations';
+import { slider, fader, stepper } from './route-animations';
+// import { slider, transformer, fader, stepper } from './route-animations';
+
 // import {
 //   trigger,
 //   transition,
@@ -23,7 +25,7 @@ import { slider, transformer, fader, stepper } from './route-animations';
   animations: [ // <-- add your animations here
     fader,
     slider,
-    transformer,
+    // transformer,
     stepper
   ]
 })
@@ -42,7 +44,7 @@ export class AppComponent {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['fader'];
   }
 
   // this.router.events.subscribe(event => {
