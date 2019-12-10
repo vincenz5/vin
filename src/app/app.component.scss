@@ -30,7 +30,8 @@ app-bottom {
 .sidenav {
   width: 200px;
   z-index: 5;
-
+  background-color: #303030;
+  color: white;
 }
 
 .sidenav {
@@ -47,6 +48,7 @@ app-bottom {
 
 .mat-list-base {
   padding-top: 4em;
+  color: white !important;
 }
 
 .sidenav .mat-toolbar {
@@ -92,6 +94,7 @@ app-bottom {
   right: 0;
   position: absolute;
   padding-right: 0.8em;
+  color: white;
 
   a {
     font-size: 0.9em;
@@ -107,4 +110,8 @@ app-bottom {
   a:hover {
     text-decoration: underline;
   }
+}
+
+.mat-nav-list .mat-list-item {
+  color: white;
 }
