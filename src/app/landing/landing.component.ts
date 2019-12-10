@@ -24,7 +24,7 @@ export class LandingComponent implements OnInit {
 
   message(): void {
     const dialogRef = this.dialog.open( ContactComponent, {
-      width: '90%', maxWidth: '90%'
+      width: '90%', maxWidth: '90%', 
     });
 
     dialogRef.afterClosed().subscribe(result => {

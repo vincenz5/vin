@@ -22,7 +22,9 @@
                 <a mat-list-item routerLink="/writing" (click)="snav.toggle()">Writing</a>
                 <a mat-list-item routerLink="/photo" (click)="snav.toggle()">Photography</a>
                 <a mat-list-item routerLink="/software" (click)="snav.toggle()">Software</a>
-                <button mat-button (click)="snav.toggle()">Close Menu</button>
+                <button mat-button (click)="snav.toggle()">Close Menu
+                        <i class="material-icons">clear</i>
+                </button>
             </mat-nav-list>
         </mat-sidenav>
 
@@ -37,4 +39,4 @@
         <router-outlet #outlet="outlet"></router-outlet>
     </main>
 
-<app-bottom></app-bottom>
+<!-- <app-bottom></app-bottom> -->

@@ -22,7 +22,8 @@ export class ContactComponent implements OnInit {
 
   constructor(public _fireservice: AddtofireService, private fb: FormBuilder, 
     private af: AngularFireModule, private db: AngularFirestore,
-    private dialog: MatDialog, private _snackBar: MatSnackBar
+    private dialog: MatDialog, private _snackBar: MatSnackBar,
+    public dialogRef: MatDialogRef<MatDialog>
   ) {}
 
   ngOnInit() {
@@ -55,6 +56,11 @@ export class ContactComponent implements OnInit {
     this._snackBar.open(this.message, this.action, {
       duration: 4000,
     });
+  }
+
+  closeDialog() {
+    console.log("Closing Dialog");
+      this.dialogRef.close('Closing');
   }
 
 }

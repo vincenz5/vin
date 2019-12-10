@@ -23,6 +23,7 @@
 
 form {
     padding-right: 2em;
+    text-align: center;
 }
 
 #message {
@@ -43,6 +44,10 @@ form {
     // border-color: rgb(105, 107, 226); 
     // width: 100%; 
     // border-radius: 1.4em;
+}
+
+#submit {
+    margin-bottom: 0.2em;
 }
 
 .submit:hover {

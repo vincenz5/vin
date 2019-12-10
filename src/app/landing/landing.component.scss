@@ -1,11 +1,20 @@
 .main {
-    padding-bottom: 25em;
-    height: 100%;
+    // padding-bottom: 25em;
+    // height: 100vh;
+    text-align: center;
+    background-color: #303030;
+    height: 90vh;
+    overflow: hidden;
+
+    @media screen and (max-width: 400px) {
+        height: 100vh;
+    }
 }
 
 .title {
     display: block;
     margin: 0.5em 1em;
+    color: white;
     // width: 50%;
 
     @media (min-width: 600px) {
@@ -14,7 +23,6 @@
     }
 
     h1 {
-        width: 70%;
         display: block;
         // margin: 0.5em auto;
     }
@@ -31,6 +39,8 @@
     margin: 0.5em 1em;
     padding: 1em 1em;
     background-color: rgba(124, 192, 192, 0.329);
+    text-align: left;
+    color: white;
 }
 
 app-bottom {
@@ -45,4 +55,8 @@ app-bottom {
     // background-color: black;
     // color: white;
     // border-radius: 1.2em;
+}
+
+.mat-dialog-container {
+    background-color: #303030 !important;
 }
