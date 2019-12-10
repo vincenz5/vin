@@ -21,6 +21,7 @@ import { ContactComponent } from 'src/app/contact/contact.component';
 import { TcrComponent } from 'src/app/software/tcr/tcr.component';
 import { GsapComponent } from 'src/app/software/gsap/gsap.component';
 import { MapComponent } from 'src/app/software/map/map.component';
+// import { LoginComponent } from 'src/app/pages/login/login.component';
 
 
 
@@ -28,6 +29,17 @@ import { MapComponent } from 'src/app/software/map/map.component';
 const routes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '', component: LandingComponent },
+//   {
+//     path: 'login',
+//     loadChildren: () =>
+//         import('./pages/login/login.module').then(
+//             m => m.LoginModule,
+//         ),
+// },
+//   {
+//     path: '**',
+//     redirectTo: 'login',
+// },
   { path: 'prof', component: ProfComponent },
   { path: 'writing', component: WritingComponent, data: { animation: 'isRight' } },
   { path: 'photo', component: PhotoComponent, data: { animation: 'isLeft' } },
@@ -47,6 +59,7 @@ const routes: Routes = [
   { path: 'tcr', component: TcrComponent },
   { path: 'gsap', component: GsapComponent },
   { path: 'map', component: MapComponent },
+  // { path: 'login', component: LoginComponent },
   { path: 'software', component: SoftwareComponent }
 ];
 

@@ -72,6 +72,7 @@ import {
 import { MapComponent } from './software/map/map.component';
 import { AnimationComponent } from './software/animation/animation.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

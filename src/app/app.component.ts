@@ -21,10 +21,10 @@ import { slider, transformer, fader, stepper } from './route-animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [ // <-- add your animations here
-    fader
-    // slider,
-    // transformer,
-    // stepper
+    fader,
+    slider,
+    transformer,
+    stepper
   ]
 })
 export class AppComponent {
@@ -44,5 +44,10 @@ export class AppComponent {
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
+
+  // this.router.events.subscribe(event => {
+  //   // close sidenav on routing
+  //   this.sidenavService.close();
+  // });
   
 }

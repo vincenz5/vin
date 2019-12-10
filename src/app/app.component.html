@@ -18,19 +18,23 @@
     <mat-sidenav-container class="sidenav-container">
         <mat-sidenav #snav class="sidenav" fixedInViewport>
             <mat-nav-list class="sidenavcontent">
-                <a mat-list-item routerLink="/prof">Professional Profile</a>
-                <a mat-list-item routerLink="/writing">Writing</a>
-                <a mat-list-item routerLink="/photo">Photography</a>
-                <a mat-list-item routerLink="/software">Software</a>
+                <a mat-list-item routerLink="/prof" (click)="snav.toggle()">Professional Profile</a>
+                <a mat-list-item routerLink="/writing" (click)="snav.toggle()">Writing</a>
+                <a mat-list-item routerLink="/photo" (click)="snav.toggle()">Photography</a>
+                <a mat-list-item routerLink="/software" (click)="snav.toggle()">Software</a>
+                <button mat-button (click)="snav.toggle()">Close Menu</button>
             </mat-nav-list>
         </mat-sidenav>
 
         <!-- <mat-sidenav-content> -->
-            <main [@routeAnimations]="prepareRoute(outlet)" class="content">
+            <!-- <main [@routeAnimations]="prepareRoute(outlet)">
                 <router-outlet #outlet="outlet"></router-outlet>
-            </main>
+            </main> -->
         <!-- </mat-sidenav-content> -->
     </mat-sidenav-container>
 </div>
+<main [@routeAnimations]="prepareRoute(outlet)" class="app-view">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </main>
 
 <app-bottom></app-bottom>
